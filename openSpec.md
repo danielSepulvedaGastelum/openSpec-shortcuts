@@ -409,3 +409,12 @@ $openspec-sync-specs
 ```
 > ⚠️ **Advertencia:** 
 > Haz commit con los cambios.
+
+---
+---
+---
+# Spec Drifts
+
+Cuando se realizan modificaciones al codigo fuera del ciclo de `OpenSpec` se pueden genrar estas inconsistencias conocidas como **Spec Drift**.
+
+Estas Divergencias entre el código y las especificaciones puede provocar errores futuros al generar futuras especificaciones usando los comandos de `OpenSpec`, derivado a que la fuente de la verdad (**Las Specs y el Código**) no es congruente entre si.
