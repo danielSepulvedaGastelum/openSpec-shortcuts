@@ -385,12 +385,19 @@ Este proceso puede tardar un poco ya que es cuando genera todos los archivos de 
 > Haz commit con los cambios.
 
 ---
-2. Si la tarea es correcta y no se va a iterar con algo de esta especificación se procede a archivar la especificación con el siguiente comando:
+2. Despues de una implementación grande, es remondable usar este comando para que verifique la implementación:
+
+```sh
+$openspec-verify-change
+```
+ 
+---
+3. Si la tarea es correcta y no se va a iterar con algo de esta especificación se procede a archivar la especificación con el siguiente comando:
 
 ```sh
 $openspec-archive-change
 ```
-
+[$openspec-verify-change](C:\\Desarrollo\\sdd_curso\\tema4\\cartaya\\.agents\\skills\\openspec-verify-change\\SKILL.md) 
 > ⚠️ **Advertencia:** 
 > Esto probablemente se deba hacer antes, o el agente lo puede sugerir:
 ```text
