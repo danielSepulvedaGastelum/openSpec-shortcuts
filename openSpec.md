@@ -418,3 +418,50 @@ $openspec-sync-specs
 Cuando se realizan modificaciones al codigo fuera del ciclo de `OpenSpec` se pueden genrar estas inconsistencias conocidas como **Spec Drift**.
 
 Estas Divergencias entre el código y las especificaciones puede provocar errores futuros al generar futuras especificaciones usando los comandos de `OpenSpec`, derivado a que la fuente de la verdad (**Las Specs y el Código**) no es congruente entre si.
+
+## Crear una Skill para verifricar que las especificaciones coincidan con el código
+
+Se ingresa esto a el agente y se anexa el archivo skill.md
+
+```sh
+Crea un skill de proyecto (spec-audit) con la siguiente tarea que te anexo
+
+```
+
+Para usar esta skill solo ejecuamos el comando:
+
+```sh
+$spec-audit
+```
+Después de esperar la espuesta del agente con los Drifts, se ejecuta este comanto con una propuesta nueva para que pueda corregir las specs vivas
+
+```sh
+$openspec-propose Propon los cambios necesarios para solverntar los drifts existentes en el proyecto
+```
+
+Después de concluir con esta propuesta se generarán los Deltas de las modifcaciones a las Specs ya existentes.
+
+> ⚠️ **Advertencia:** 
+> No deberiamos ejecutar el $openspec-apply-change dado que la funcionalidad ya está implemtada en el código.
+
+
+
+---
+Si hacemos $openspec-apply-change intentará revisar nuestro código, implementar lo que falte.
+
+```sh
+$openspec-apply-change ten en cuenta que la mayoría de funcionalidad ya está implementada, porque estoy resolviendo un Drift, implementa solo aquello que falte
+```
+
+Si la tarea es correcta y no se va a iterar con algo de esta especificación se procede a archivar la especificación con el siguiente comando:
+
+```sh
+$openspec-archive-change
+```
+
+[$openspec-verify-change](C:\\Desarrollo\\sdd_curso\\tema4\\cartaya\\.agents\\skills\\openspec-verify-change\\SKILL.md) 
+> ⚠️ **Advertencia:** 
+> Esto probablemente se deba hacer antes, o el agente lo puede sugerir:
+```text
+Es probable que pregunte si antes de archivar se sincronicen las especificaciones Delta hacia las Specs Activa, que se hace con el comando:
+```
